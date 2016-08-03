@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <name>Google RE2 NAR package</name>
   <groupId>com.github.cern.narlibs</groupId>
-  <artifactId>re2-nar</artifactId>
+  <artifactId>re2</artifactId>
   <packaging>nar</packaging>
   <version>2016-08-01</version>
 
@@ -32,13 +32,10 @@
         <extensions>true</extensions>
         <configuration>
             <libraries>
-            <library>
-                <type>shared</type>
-            </library>
-            <library>
-                <type>static</type>
-            </library>
+				<library> <type>shared</type> </library>
+				<library> <type>static</type> </library>
             </libraries>
+            <output>re2</output>
 	</configuration>
       </plugin>
     </plugins>
