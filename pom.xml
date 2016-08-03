@@ -1,0 +1,46 @@
+<?xml version = '1.0'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <name>Google RE2 NAR package</name>
+  <groupId>com.github.cern.narlibs</groupId>
+  <artifactId>re2-nar</artifactId>
+  <packaging>nar</packaging>
+  <version>2016-08-01</version>
+
+  <description>Google RE2 NAR packaging</description>
+  
+  <distributionManagement>
+    <repository>
+      <id>CERN</id>
+      <name>CERN Repository</name>
+      <url>https://repository.cern.ch/nexus/content/repositories/enice-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>CERN Snapshot Repository</id>
+      <name>CERN Snapshot Repository</name>
+      <url>https://repository.cern.ch/nexus/content/repositories/enice-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+    
+  <build>
+    <plugins>
+      <plugin>
+		<groupId>com.github.maven-nar</groupId>
+		<artifactId>nar-maven-plugin</artifactId>
+		<version>3.2.3</version>
+        <extensions>true</extensions>
+        <configuration>
+            <libraries>
+            <library>
+                <type>shared</type>
+            </library>
+            <library>
+                <type>static</type>
+            </library>
+            </libraries>
+	</configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
